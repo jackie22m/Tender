@@ -1,0 +1,22 @@
+info:
+  name: Create Pet - Valid
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:9812/pets
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Blobby",
+        "species": "blob"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

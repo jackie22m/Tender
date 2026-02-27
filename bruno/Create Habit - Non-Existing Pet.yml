@@ -1,0 +1,24 @@
+info:
+  name: Create Habit - Non-Existing Pet
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: http://localhost:9812/pets/2/habits
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Morning Walk",
+        "category": "fitness",
+        "targetFrequency": 3,
+        "statBoost": "energy"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,22 @@
+info:
+  name: Log Habit
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: http://localhost:9812/pets/1/logs
+  body:
+    type: json
+    data: |-
+      {
+        "habitId": 1, 
+        "note": "Felt great!"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
